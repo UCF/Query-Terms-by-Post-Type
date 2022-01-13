@@ -1,0 +1,13 @@
+{
+  "private": true,
+  "devDependencies": {
+    "browser-sync": "^2.27.5",
+    "gulp": "^4.0.2",
+    "gulp-readme-to-markdown": "^0.2.1",
+    "merge": "^2.1.1",
+    "sass": "^1.42.1"
+  },
+  "browserslist": [
+    "last 2 versions"
+  ]
+}
