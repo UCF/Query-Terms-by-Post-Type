@@ -5,7 +5,7 @@ about: Suggest an idea for this plugin
 ---
 
 <!--
-Thank you for suggesting an idea to make Term-Query-by-Post-Type better.
+Thank you for suggesting an idea to make Query-Terms-by-Post-Type better.
 
 Please provide a general summary of your feature request in the Title above, and fill in as much of the template below as you can.
 -->

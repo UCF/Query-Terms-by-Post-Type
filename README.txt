@@ -1,4 +1,4 @@
-=== Term Query by Post Type ===
+=== Query Terms by Post Type ===
 Contributors: ucfwebcom
 Requires at least: 5.3
 Tested up to: 5.3
@@ -37,8 +37,8 @@ n/a
 * gulp-cli
 
 = Instructions =
-1. Clone the Term-Query-by-Post-Type repo into your local development environment, within your WordPress installation's `plugins/` directory: `git clone https://github.com/UCF/Term-Query-by-Post-Type.git`
-2. `cd` into the new Term-Query-by-Post-Type directory, and run `npm install` to install required packages for development into `node_modules/` within the repo
+1. Clone the Query-Terms-by-Post-Type repo into your local development environment, within your WordPress installation's `plugins/` directory: `git clone https://github.com/UCF/Query-Terms-by-Post-Type.git`
+2. `cd` into the new Query-Terms-by-Post-Type directory, and run `npm install` to install required packages for development into `node_modules/` within the repo
 3. Optional: If you'd like to enable [BrowserSync](https://browsersync.io) for local development, or make other changes to this project's default gulp configuration, copy `gulp-config.template.json`, make any desired changes, and save as `gulp-config.json`.
 
     To enable BrowserSync, set `sync` to `true` and assign `syncTarget` the base URL of a site on your local WordPress instance that will use this plugin, such as `http://localhost/wordpress/my-site/`.  Your `syncTarget` value will vary depending on your local host setup.
@@ -49,9 +49,9 @@ n/a
 5. Activate this plugin on your development WordPress site.
 
 = Other Notes =
-* This plugin's README.md file is automatically generated. Please only make modifications to the README.txt file, and make sure the `gulp readme` command has been run before committing README changes.  See the [contributing guidelines](https://github.com/UCF/Term-Query-by-Post-Type/blob/master/CONTRIBUTING.md) for more information.
+* This plugin's README.md file is automatically generated. Please only make modifications to the README.txt file, and make sure the `gulp readme` command has been run before committing README changes.  See the [contributing guidelines](https://github.com/UCF/Query-Terms-by-Post-Type/blob/master/CONTRIBUTING.md) for more information.
 
 
 == Contributing ==
 
-Want to submit a bug report or feature request?  Check out our [contributing guidelines](https://github.com/UCF/Term-Query-by-Post-Type/blob/master/CONTRIBUTING.md) for more information.  We'd love to hear from you!
+Want to submit a bug report or feature request?  Check out our [contributing guidelines](https://github.com/UCF/Query-Terms-by-Post-Type/blob/master/CONTRIBUTING.md) for more information.  We'd love to hear from you!

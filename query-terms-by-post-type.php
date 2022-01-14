@@ -1,13 +1,13 @@
 <?php
 /*
-Plugin Name: Term Query by Post Type
+Plugin Name: Query Terms by Post Type
 Description: Adds options for filtering taxonomy term retrieval by post types with assigned terms.
 Version: 0.0.0
 Author: UCF Web Communications
 License: GPL3
-GitHub Plugin URI: UCF/Term-Query-by-Post-Type
+GitHub Plugin URI: UCF/Query-Terms-by-Post-Type
 */
-namespace TermQueryByPostType;
+namespace QueryTermsByPostType;
 
 if ( ! defined( 'WPINC' ) ) {
 	die;

@@ -1,8 +1,8 @@
 <!---
-Thank you for contributing to Term-Query-by-Post-Type.
+Thank you for contributing to Query-Terms-by-Post-Type.
 
 Please make sure you've read our contributing guidelines:
-https://github.com/UCF/Term-Query-by-Post-Type/blob/master/CONTRIBUTING.md
+https://github.com/UCF/Query-Terms-by-Post-Type/blob/master/CONTRIBUTING.md
 
 Provide a general summary of your changes in the Title above and fill in the template below.
 -->
