@@ -12,9 +12,9 @@ Adds options for filtering taxonomy term retrieval by post types with assigned t
 
 == Description ==
 
-By default, when querying taxonomy terms throughout WordPress (e.g. via `get_terms()`), terms assigned to _all_ post types the taxonomy is registered on are returned.  For instance, if your site has the taxonomy "genre" available on the post types "book" and "magazine", and you want to retrieve a list of genres assigned to _just_ magazines, you'd have to first retrieve all magazine IDs, and then perform a `wp_get_object_terms()` call, passing in the retrieved magazine IDs.  [This WordPress Stack Exchange question](https://wordpress.stackexchange.com/questions/57444/get-terms-by-custom-post-type) explains the issue well.
+By default, when querying taxonomy terms throughout WordPress (e.g. via `get_terms()`), terms assigned to _all_ post types the taxonomy is registered on are returned.  For instance, if your site has the taxonomy "genre" available on the post types "book" and "magazine", and you want to retrieve a list of genres assigned to _just_ magazines, you'd have to first retrieve all magazine IDs, and then perform a `wp_get_object_terms()` call, passing in the retrieved magazine IDs.  [This WordPress Stack Exchange question](https://wordpress.stackexchange.com/questions/57444/get-terms-by-custom-post-type) explains the issue well; also see [this WordPress core trac ticket](https://core.trac.wordpress.org/ticket/18106).
 
-This plugin adds support for a `post_types` argument for `WP_Term_Query->get_terms()`/`get_terms()` and a GET param on REST endpoints for taxonomies registered with `show_in_rest` enabled.
+This plugin adds support for a `post_types` argument for `WP_Term_Query->get_terms()`/`get_terms()` and a GET param on REST endpoints for taxonomies registered with [`show_in_rest` enabled](https://developer.wordpress.org/reference/functions/register_taxonomy/#parameters).
 
 
 == Installation/setup ==
@@ -41,8 +41,22 @@ $magazine_or_book_genres = get_terms( array(
 ) );
 ```
 
+= Usage with `get_categories()` and `get_tags()` =
+`get_categories()` and `get_tags()` utilize `get_terms()` under the hood, so you can simply pass these functions the `post_types` argument in the same way:
+
+```
+<?php
+$just_post_categories = get_categories( array(
+    'post_types' => 'post'
+) );
+
+$just_post_tags = get_tags( array(
+    'post_types' => 'post'
+) )
+```
+
 = Usage with REST endpoints =
-When querying vanilla REST API endpoints for taxonomies, you can pass in the `post_types` param with a list of taxonomy names to filter against.  Comma-separated lists of names or query parameter array syntax are both supported.
+When querying vanilla REST API endpoints for taxonomies, you can pass in the `post_types` param with a list of taxonomy names to filter against.  Terms assigned to _any_ of the provided post types will be returned (not _all_).  Comma-separated lists of names or query parameter array syntax are both supported.
 
 Examples, with a custom taxonomy "genre", and post types "book" and "magazine":
 
@@ -58,6 +72,7 @@ Examples, with a custom taxonomy "genre", and post types "book" and "magazine":
 
 = Things to keep in mind =
 - One other place within WordPress where term counts are not filtered by post type as expected is within the WordPress admin, when viewing an `edit-tags.php` screen.  This plugin _does not_ attempt to rectify inaccurate values in the "Count" column of these admin screens at this time for performance reasons.
+- You may run into performance issues with large numbers of terms or posts when filtering term results by `post_types`.
 - This plugin works by hooking into the [`terms_clauses`](https://developer.wordpress.org/reference/hooks/terms_clauses/) hook, which modifies the generated SQL statement when retrieving terms.  This plugin does its best to modify SQL statements late during execution, but may still conflict with other plugins that attempt to override this hook.  **It is your responsibility to test and ensure this plugin works as expected with existing code.**
 
 
