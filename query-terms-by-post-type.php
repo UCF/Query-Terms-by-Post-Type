@@ -29,7 +29,7 @@ function filter_terms_by_post_type( $pieces, $taxonomies, $args ) {
 		global $wpdb;
 
 		$post_types_raw = is_string( $args['post_types'] ) ? explode( ',', $args['post_types'] ) : (array) $args['post_types'];
-		$post_types = "'" . implode( "','", array_map( 'esc_sql', array_map( 'sanitize_title_for_query' , $post_types_raw ) ) ) . "'";
+		$post_types = "'" . implode( "','", array_filter( $post_types_raw, 'post_type_exists' ) ) . "'";
 
 		$pieces['fields'] .= ", COUNT(*) ";
 
