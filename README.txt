@@ -24,7 +24,7 @@ Simply install and activate this plugin, and follow [usage instructions](#usage)
 == Usage ==
 
 = Usage with `get_terms()` =
-When retrieving terms via `get_terms()`, pass in the `post_types` argument with either a string or array of strings for each taxonomy name to filter against.  Terms assigned to _any_ of the provided post types will be returned (not _all_).
+When retrieving terms via `get_terms()`, pass in the `post_types` argument with either a string or array of strings for each post type name to filter against.  Terms assigned to _any_ of the provided post types will be returned (not _all_).
 
 Examples, with a custom taxonomy "genre", and post types "book" and "magazine":
 
@@ -56,7 +56,7 @@ $just_post_tags = get_tags( array(
 ```
 
 = Usage with REST endpoints =
-When querying vanilla REST API endpoints for taxonomies, you can pass in the `post_types` param with a list of taxonomy names to filter against.  Terms assigned to _any_ of the provided post types will be returned (not _all_).  Comma-separated lists of names or query parameter array syntax are both supported.
+When querying vanilla REST API endpoints for taxonomies, you can pass in the `post_types` param with a list of post type names to filter against.  Terms assigned to _any_ of the provided post types will be returned (not _all_).  Comma-separated lists of names or query parameter array syntax are both supported.
 
 Examples, with a custom taxonomy "genre", and post types "book" and "magazine":
 
