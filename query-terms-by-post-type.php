@@ -2,7 +2,7 @@
 /*
 Plugin Name: Query Terms by Post Type
 Description: Adds options for filtering taxonomy term retrieval by post types with assigned terms.
-Version: 0.0.0
+Version: 1.0.0
 Author: UCF Web Communications
 License: GPL3
 GitHub Plugin URI: UCF/Query-Terms-by-Post-Type
@@ -18,7 +18,7 @@ if ( ! defined( 'WPINC' ) ) {
  * Custom filter for filtering terms by post_type.
  * Intended for use with the `terms_clauses` hook.
  * @author Jim Barnes
- * @since 0.0.0
+ * @since 1.0.0
  * @param array $pieces The pieces of the query to be sent to MySQL ('select', 'join', 'where')
  * @param array $taxonomies The taxonomies being filtered
  * @param array $args The get_terms arguments
@@ -48,7 +48,7 @@ function filter_terms_by_post_type( $pieces, $taxonomies, $args ) {
  * if it is request in the GET parameters of the $request.
  * Intended for use with the `rest_{$this->taxonomy}_query` hook.
  * @author Jim Barnes
- * @since 0.0.0
+ * @since 1.0.0
  * @param array $args The argument array for the query
  * @param WP_Request $request The WP_Request argument
  * @return array $args The modified args array
@@ -66,7 +66,7 @@ function rest_add_post_types_arg( $args, $request ) {
  * Custom callback for getting an accurate term count
  * when the `post_types` filter is used.
  * @author Jim Barnes
- * @since 0.0.0
+ * @since 1.0.0
  * @param array $term The term in array form
  * @param string $field_name The field name being modified
  * @param WP_Request $request The request object
@@ -99,7 +99,7 @@ function rest_get_term_count( $term, $field_name, $request ) {
 
 /**
  * Adds all actions, filters, etc. required for the plugin to function.
- * @since 0.0.0
+ * @since 1.0.0
  * @author Jo Dickson
  * @return void
  */
