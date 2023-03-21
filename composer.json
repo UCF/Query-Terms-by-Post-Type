@@ -1,0 +1,8 @@
+{
+    "name": "ucf/query-terms-by-post-type",
+    "description": "Adds options for filtering taxonomy term retrieval by post types with assigned terms.",
+    "type": "wordpress-plugin",
+    "require": {
+        "composer/installers": "~1.0"
+    }
+}

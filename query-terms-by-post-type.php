@@ -2,7 +2,7 @@
 /*
 Plugin Name: Query Terms by Post Type
 Description: Adds options for filtering taxonomy term retrieval by post types with assigned terms.
-Version: 1.0.0
+Version: 1.0.1
 Author: UCF Web Communications
 License: GPL3
 GitHub Plugin URI: UCF/Query-Terms-by-Post-Type

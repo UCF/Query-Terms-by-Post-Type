@@ -71,6 +71,10 @@ Examples, with a custom taxonomy "genre", and post types "book" and "magazine":
 
 ## Changelog ##
 
+### 1.0.1 ###
+Enhancements:
+* Added composer file.
+
 ### 1.0.0 ###
 * Initial release
 
